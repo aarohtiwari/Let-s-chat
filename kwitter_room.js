@@ -1,0 +1,13 @@
+
+//ADD YOUR FIREBASE LINKS HERE
+
+    user_name = localStorage.getItem("User Name");
+    document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
+
+function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
+       Room_names = childKey;
+      //Start code
+
+      //End code
+      });});}
+getData();
